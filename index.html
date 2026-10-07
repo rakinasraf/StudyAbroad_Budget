@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Charabian Chart: Study Abroad Treasure Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header><div class="waves" aria-hidden="true"></div>
+ <div class="hero"><p class="skull" aria-hidden="true">☠</p><h1>Charabian Chart</h1>
+ <p class="sub">Sail out of Bangladesh, pick your port, and count the gold the voyage will cost.</p></div>
+ <button id="theme" type="button"></button></header>
+<main>
+<section class="log"><h2><b>I</b>Pick a port of call</h2>
+ <input id="q" type="search" placeholder="Search 53 countries" aria-label="Search countries"><div id="countries" class="countries"></div></section>
+<section class="log hide" id="info"><h2><b>II</b>Charts of the route</h2><dl id="infoList"></dl></section>
+<section class="log hide" id="plan"><h2><b>III</b>Choose your berth</h2><div class="grid">
+ <label>Level<select id="level"></select></label><label>Subject<select id="field"></select></label>
+ <label>City<select id="city"></select></label><label>University<select id="uni"></select></label>
+ <label>Accommodation<select id="acc"></select></label><label>Return flights a year<input id="trips" type="number" min="0" max="4" value="1"></label></div></section>
+<section class="log hide" id="result"><h2><b>IV</b>The treasure bill</h2><p id="err" class="err"></p><div id="out"></div></section>
+</main>
+<footer>☠ Every figure is a rough BDT estimate from a cost model, not a university price list. Subject availability and fees vary by university. Confirm with official sources before you commit.</footer>
+<script src="assets/data.js"></script><script src="assets/app.js"></script></body></html>

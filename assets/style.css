@@ -1,0 +1,37 @@
+:root{--bg:#e6cf9a;--card:#f8ecc8;--ink:#1d2f3a;--sea:#0e4d64;--gold:#a8741a;--red:#a8261a;--line:#8a6a35;--plank:#5a3b1e;--plank2:#4a2f17;--hero:#0e4d64;--sky:#f0d58a}
+[data-theme=dark]{--bg:#050d14;--card:#0c2231;--ink:#e8d9b0;--sea:#5cc0cc;--gold:#e2b04a;--red:#e2674f;--line:#2b6074;--plank:#2a1b0e;--plank2:#1d130a;--hero:#030a10;--sky:#e2b04a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg) radial-gradient(circle at 20% 10%,#ffffff18,transparent 40%);color:var(--ink);font:19px/1.55 'IM Fell English',Georgia,serif}
+header{position:relative;background:linear-gradient(var(--hero),var(--sea));color:var(--sky);padding:46px 5vw 90px;text-align:center;border-bottom:10px solid var(--plank);box-shadow:0 6px 0 var(--plank2)}
+.waves{position:absolute;inset:auto 0 0 0;height:60px;background:radial-gradient(circle at 25px 0,transparent 24px,var(--bg) 25px) 0 0/50px 60px repeat-x;animation:sway 9s linear infinite}
+@keyframes sway{to{background-position:50px 0}}
+@media(prefers-reduced-motion:reduce){.waves{animation:none}}
+.skull{font-size:3rem;margin:0}
+h1,h2,h3{font-family:'Pirata One',Georgia,serif;font-weight:400}
+h1{font-size:clamp(3rem,9vw,6rem);margin:0;line-height:.95;letter-spacing:.04em;text-shadow:3px 3px 0 #000a}
+.sub{margin:10px auto 0;max-width:46ch;font-style:italic;color:#f8ecc8}
+#theme{position:absolute;top:14px;right:14px;font:inherit;background:var(--plank);color:var(--sky);border:2px solid var(--gold);padding:8px 14px;cursor:pointer}
+main{max-width:920px;margin:0 auto;padding:10px 5vw}
+.log{background:var(--card);margin:26px 0;padding:22px 26px 26px;border:3px double var(--line);box-shadow:5px 5px 0 #0004;position:relative}
+.log h2{color:var(--sea);font-size:2rem;margin:0 0 14px;display:flex;align-items:center;gap:12px}
+.log h2 b{font:1.2rem 'Pirata One',serif;background:radial-gradient(circle at 35% 30%,#e0503b,var(--red) 60%,#5a0f08);color:#ffe9c0;border-radius:50%;width:2.2rem;height:2.2rem;display:grid;place-items:center;box-shadow:1px 2px 3px #0008}
+.hide{display:none}
+#q,select,input{width:100%;padding:10px;font:inherit;background:var(--bg);color:var(--ink);border:2px solid var(--line);margin-top:4px}
+#q{margin:0 0 14px}
+.countries{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;max-height:340px;overflow:auto;padding:4px}
+.countries button{font:inherit;background:linear-gradient(var(--plank),var(--plank2));color:#f3dfae;border:2px solid var(--gold);padding:8px;cursor:pointer;text-align:left}
+.countries button span{display:block;font-size:1.7rem}
+.countries button[aria-pressed=true]{background:var(--red);color:#fff;outline:3px solid var(--gold)}
+button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:4px 18px}
+label{font-weight:bold;margin-bottom:8px;display:block}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:10px 20px}dt{color:var(--red);font-weight:bold}dd{margin:0}
+a{color:var(--sea);font-weight:bold}
+table{width:100%;border-collapse:collapse}td{padding:8px 4px;border-bottom:1px dashed var(--line)}td:last-child{text-align:right;white-space:nowrap}
+.bar{display:block;height:10px;background:#0002;min-width:70px;border:1px solid var(--line)}.bar u{display:block;height:100%;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,#ffd96b 6px 12px)}
+.chest{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:20px 0}
+.chest div{background:linear-gradient(var(--plank),var(--plank2));border:3px solid var(--gold);padding:14px;text-align:center;color:#f3dfae}
+.chest strong{display:block;font:2rem 'Pirata One',serif;color:#ffd96b}.chest small{display:block;opacity:.85}
+.rank{font-style:italic}.err{color:var(--red)}
+footer{text-align:center;padding:20px 6vw 50px;font-size:.9rem;opacity:.85}
+@media(max-width:520px){dl{grid-template-columns:1fr}}
